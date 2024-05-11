@@ -8,7 +8,7 @@ import net.minecraft.server.command.ServerCommandSource;
 public class ResetCounterCommand {
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher) {
         dispatcher.register(CommandManager.literal("resetcounter")
-                .requires(source -> source.hasPermissionLevel(2))
+                .requires(source -> source.hasPermissionLevel(1))
                 .executes(ResetCounterCommand::resetCounter));
     }
 
