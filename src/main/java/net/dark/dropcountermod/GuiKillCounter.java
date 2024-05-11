@@ -23,22 +23,15 @@ public class GuiKillCounter {
         return !dropsToNumber.containsKey(dropName);
     }
 
+    private static final int serverNameLength = 9;
     public static void handleMessage(String message, int receiveMessageLength) {
-        //String drop = message.substring(receiveMessageLength + 1);
-        //if(firstTimeDrop(drop)) {
-        //    dropsToNumber.put(drop, 1);
-        //}
-        //else {
-        //    int currentAmount = dropsToNumber.get(drop);
-        //    dropsToNumber.put(drop, currentAmount + 1);
-        //}
-        if(firstTimeDrop("drop"))
-        {
-            dropsToNumber.put("drop", 1);
+        String drop = message.substring(serverNameLength + receiveMessageLength + 1);
+        if(firstTimeDrop(drop)) {
+            dropsToNumber.put(drop, 1);
         }
-        else{
-            int currentAmount = dropsToNumber.get("drop");
-            dropsToNumber.put("drop", currentAmount + 1);
+        else {
+            int currentAmount = dropsToNumber.get(drop);
+            dropsToNumber.put(drop, currentAmount + 1);
         }
     }
 
