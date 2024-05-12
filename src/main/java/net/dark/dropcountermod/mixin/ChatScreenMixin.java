@@ -14,11 +14,10 @@ public class ChatScreenMixin {
 
     @Inject(method = "onGameMessage", at = @At("HEAD"))
     private void onGameMessage(Text message, boolean overlay, CallbackInfo ci) {
-        String tempString = message.getString();
-        if(tempString.isEmpty()) return;
-        String tempReceiveMessage = Text.literal(I18n.translate("dark.dropcountermod.receiveMessage")).getString();
-        if(tempString.contains(tempReceiveMessage)) {
-            GuiKillCounter.handleMessage(tempString, tempReceiveMessage.length());
+        Text tempReceiveMessage = Text.literal(I18n.translate("dark.dropcountermod.receiveMessage"));
+        String stringToCheckContains = message.getString();
+        if(stringToCheckContains.contains(tempReceiveMessage.getString())) {
+            GuiKillCounter.handleMessage(message);
         }
     }
 }
