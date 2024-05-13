@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(MessageHandler.class)
-public class ChatScreenMixin {
+public class GameChatMixin {
 
     @Inject(method = "onGameMessage", at = @At("HEAD"))
     private void onGameMessage(Text message, boolean overlay, CallbackInfo ci) {
