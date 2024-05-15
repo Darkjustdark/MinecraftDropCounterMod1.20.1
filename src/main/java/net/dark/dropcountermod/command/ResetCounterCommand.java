@@ -2,7 +2,7 @@ package net.dark.dropcountermod.command;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.context.CommandContext;
-import net.dark.dropcountermod.gui.GuiKillCounter;
+import net.dark.dropcountermod.gui.GuiDropCounter;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
 
@@ -14,7 +14,7 @@ public class ResetCounterCommand {
     }
 
     private static int resetCounter(CommandContext<ServerCommandSource> context) {
-        GuiKillCounter.resetAll();
+        GuiDropCounter.resetAll();
         return 1;
     }
 }

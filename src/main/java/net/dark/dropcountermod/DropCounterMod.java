@@ -1,7 +1,7 @@
 package net.dark.dropcountermod;
 
 import net.dark.dropcountermod.command.ResetCounterCommand;
-import net.dark.dropcountermod.gui.GuiKillCounter;
+import net.dark.dropcountermod.gui.GuiDropCounter;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
@@ -14,7 +14,7 @@ public class DropCounterMod implements ModInitializer {
 	}
 
 	private void registerHudElements(){
-		HudRenderCallback.EVENT.register(GuiKillCounter::renderKillCounter);
+		HudRenderCallback.EVENT.register(GuiDropCounter::renderKillCounter);
 	}
 
 	private void registerCommands(){

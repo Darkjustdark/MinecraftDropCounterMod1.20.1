@@ -11,10 +11,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class GuiKillCounter {
+public class GuiDropCounter {
     private static final MinecraftClient client = MinecraftClient.getInstance();
     private static final Map<Text, Integer> dropsToNumber = new HashMap<>();
-    public GuiKillCounter(){
+    public GuiDropCounter(){
 
     }
 
@@ -56,6 +56,10 @@ public class GuiKillCounter {
             }
             incrementInMap(siblings.get(2));
         }
+    }
+
+    public static void updateDrawData(Map<Text, Integer> drawData){
+
     }
 
     public static void resetAll(){
