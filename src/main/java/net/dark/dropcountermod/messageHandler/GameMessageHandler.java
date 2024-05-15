@@ -18,19 +18,24 @@ public class GameMessageHandler {
     private static String receiveMessage;
     private static int lengthOfYouReceive;
 
+    public static void resetAllCounters(){
+        dropsToNumber.clear();
+    }
     public static void handleMessage(Text message){
         updateReceiveMessage();
-        if(!doesContainReceiveMessage(message)) return;
+        if(!isMessageARelevantDrop(message)) return;
         handleDrop(message);
-        GuiDropCounter.handleMessage(message);
+        GuiDropCounter.updateDrawData(dropsToNumber);
     }
     public static void updateReceiveMessage(){
         receiveMessage = I18n.translate("dark.dropcountermod.receiveMessage");
         lengthOfYouReceive = receiveMessage.length();
     }
-    private static boolean doesContainReceiveMessage(Text message){
+    private static boolean isMessageARelevantDrop(Text message) {
         String messageAsString = message.getString();
-        return messageAsString.contains(receiveMessage);
+        if(!messageAsString.contains(receiveMessage)) return false;
+        if(messageAsString.contains(I18n.translate("dark.dropcountermod.blueprint"))) return false;//TODO: check if "Blaupause is the rigth word)
+        return true;
     }
     private static void handleDrop(Text message) {
         List<Text> siblings = message.getSiblings();

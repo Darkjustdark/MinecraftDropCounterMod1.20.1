@@ -1,4 +1,5 @@
 {
   "dark.dropcountermod.title": "You have collected the following items until now:",
-  "dark.dropcountermod.receiveMessage": "You receive"
+  "dark.dropcountermod.receiveMessage": "You receive",
+  "dark.dropcountermod.blueprint": "Blueprint"
 }
