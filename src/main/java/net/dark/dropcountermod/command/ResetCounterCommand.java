@@ -2,7 +2,6 @@ package net.dark.dropcountermod.command;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.context.CommandContext;
-import net.dark.dropcountermod.gui.GuiDropCounter;
 import net.dark.dropcountermod.messageHandler.GameMessageHandler;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
