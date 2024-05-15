@@ -1,6 +1,6 @@
 package net.dark.dropcountermod.mixin;
 
-import net.dark.dropcountermod.GuiKillCounter;
+import net.dark.dropcountermod.gui.GuiKillCounter;
 import net.minecraft.client.network.message.MessageHandler;
 import net.minecraft.client.resource.language.I18n;
 import net.minecraft.text.Text;

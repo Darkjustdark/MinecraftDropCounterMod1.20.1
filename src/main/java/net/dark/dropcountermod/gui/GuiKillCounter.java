@@ -1,4 +1,4 @@
-package net.dark.dropcountermod;
+package net.dark.dropcountermod.gui;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
