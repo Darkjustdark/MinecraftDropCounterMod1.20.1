@@ -13,6 +13,6 @@ public class GameMessageMixin {
 
     @Inject(method = "onGameMessage", at = @At("HEAD"))
     private void onGameMessage(Text message, boolean overlay, CallbackInfo ci) {
-        GameMessageHandler.handleMessage(message);
+        GameMessageHandler.handleMessage(message.copy());
     }
 }
